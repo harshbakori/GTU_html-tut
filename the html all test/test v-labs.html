@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <div id="chartContainer" style="height: 300px; width: 100%;"></div>
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+    <script>
+        window.onload = function() {
+
+            var x = 10;
+            var chart = new CanvasJS.Chart("chartContainer", {
+                animationEnabled: true,
+                theme: "light2",
+                title: {
+                    text: "C-look Arm sheduling path"
+                },
+                axisY: {
+                    includeZero: true
+                },
+                data: [{
+                    type: "line",
+                    dataPoints: [{
+                        y: x
+                    }, {
+                        y: 14
+                    }, {
+                        y: 20
+                    }, {
+                        y: 60
+                    }, {
+                        y: 50
+                    }, {
+                        y: 00
+                    }, {
+                        y: 80
+                    }, {
+                        y: 80
+                    }, {
+                        y: 10
+                    }, {
+                        y: 00
+                    }, {
+                        y: 80
+                    }, {
+                        y: 10
+                    }]
+                }]
+            });
+            chart.render();
+
+        }
+    </script>
+</body>
+
+</html>

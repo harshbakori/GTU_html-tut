@@ -1,0 +1,190 @@
+﻿<html>
+<head>
+<script>
+function myFunction() {
+  var p1= document.getElementById("txt1").value;
+ var p2= document.getElementById("txt2").value;
+  var p3= document.getElementById("txt3").value;
+ var p4= document.getElementById("txt4").value;
+  var p5= document.getElementById("txt5").value;
+  //var p1= 1;
+  //var p2= 4;
+  //var p3= 7;
+  //var p4= 17;
+  //var p5= 16;
+  
+  var b1 = 100;
+  var b2 = 500;
+  var b3 = 200;
+  var b4 = 300;
+  var b5 = 600;
+  
+  var p = [0,p1,p2,p3,p4,p5];
+  var b = [0,b1,b2,b3,b4,b5];
+  //document.write(b[0]);
+  
+  var i,j,lowest=9999,temp;
+var barry = [0,0,0,0,0,0];
+var parry = [0,0,0,0,0,0];
+var fragment = [0,0,0,0,0,0];
+ for(i=1;i<=5;i++)
+    {
+        for(j=1;j<=5;j++)
+        {
+            if(barry[j]!=1)
+            {
+                temp=b[j]-p[i];
+                if(temp>=0)
+                    if(lowest>temp)
+                    {
+                        parry[i]=j;
+                        lowest=temp;
+                    }
+            }
+        }
+        
+        fragment[i]=lowest;
+        barry[parry[i]]=1;
+        lowest=10000;
+    }
+  
+   var pp=[0,0,0,0,0,0];
+  var bb=[0,0,0,0,0,0];
+  var ff=[0,0,0,0,0,0];
+  var bbb=[0,0,0,0,0,0];
+  
+  for(i=1;i<=5 && parry[i]!=0 ;i++)
+{
+  //document.write(i+"     mhit       "+parry[i] );
+ 
+ pp[i] = i;
+ bb[i] = parry[i];
+ ff[i] = fragment[i];
+ bbb[i] = bb[i];
+ ///document.write(?);
+//document.write("\n\n\n");
+  
+}
+document.getElementById("pp1").value = pp[1];
+document.getElementById("bb1").value = bb[1];
+document.getElementById("ff1").value = ff[1];
+document.getElementById("bbb1").value = bbb[1];
+document.getElementById("pp2").value = pp[2];
+document.getElementById("bb2").value = bb[2];
+document.getElementById("ff2").value = ff[2];
+document.getElementById("bbb2").value = bbb[2];
+document.getElementById("pp3").value = pp[3];
+document.getElementById("bb3").value = bb[3];
+document.getElementById("ff3").value = ff[3];
+document.getElementById("bbb3").value = bbb[3];
+document.getElementById("pp4").value = pp[4];
+document.getElementById("bb4").value = bb[4];
+document.getElementById("ff4").value = ff[4];
+document.getElementById("bbb4").value = bbb[4];
+document.getElementById("pp5").value = pp[5];
+document.getElementById("bb5").value = bb[5];
+document.getElementById("ff5").value = ff[5];
+document.getElementById("bbb5").value = bbb[5];
+
+}
+
+</script>
+<title>best fit</title>
+<link rel="stylesheet" type="text/css" href="Untitled_1.css">
+<style type="text/css">.auto-style1 {
+	font-size: x-large;
+}
+</style>
+<body>
+
+
+   <center><i><b><font size="100" color="black" style="caption-side:top">BEST FIT ALGORITHM </font>  </b></i><p>
+   </p>
+   <marquee behavior="alternate"><strong>Subject:</strong> Operating System &nbsp;&nbsp; <strong>Topic:</strong> Memory Management</marquee></center>
+   
+   <p>&nbsp; </p>
+   <p class="auto-style1"><strong>&nbsp;  &nbsp;&nbsp;Your block size :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   Enter your process size :</strong><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ Execution :&nbsp;&nbsp;</strong>&nbsp;&nbsp; &nbsp; &nbsp;</p>
+   <form action="/action_page.php">
+	  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+	  <strong>Size of block 1:&nbsp;&nbsp;<input type="text" value="100 KB" style="width: 80px" readonly="true" name="for block 1"></strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	  <strong>Process 1:&nbsp;&nbsp;</strong><input type="text" id="txt1" style="width: 120px" placeholder="Size in KB"name="for procss 1" >
+	     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	   <strong>Process : &nbsp;<input  id="pp1"  style="width: 75px"> &nbsp;in Block no :&nbsp; <input id="bb1" style="width: 75px"> 
+     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fragment of block &nbsp; <input id="bbb1" style="width: 50px" > is:&nbsp; <input id="ff1" style="width: 75px"> </strong>
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br><br>
+
+
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ <strong>Size of block 2:&nbsp;&nbsp;<input type="text"  value="500 KB"  style="width: 80px" readonly="true" name="for block 2"></strong>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <strong>Process 2:&nbsp;&nbsp;</strong><input type="text" id="txt2"  style="width: 120px" placeholder="Size in KB"name="for procss 2" >
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <strong>Process : &nbsp;<input id="pp2" style="width: 75px">&nbsp; in Block no :&nbsp; <input id="bb2" style="width: 75px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fragment of block &nbsp; <input id="bbb2" style="width: 50px" > is:&nbsp; <input id="ff2" style="width: 75px"> </strong>
+   &nbsp;&nbsp;&nbsp;<br><br><br>
+
+
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ <strong>Size of block 3:&nbsp;&nbsp;<input type="text"  style="width: 80px"  value="200 KB" readonly="true" name="for block 3"></strong>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <strong>Process 3:&nbsp;&nbsp;</strong><input type="text" id="txt3" style="width: 120px" placeholder="Size in KB"name="for procss 3" >
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <strong>Process : &nbsp;<input id="pp3" style="width: 75px">&nbsp; in Block no :&nbsp; <input id="bb3" style="width: 75px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fragment of block &nbsp; <input id="bbb3" style="width: 50px" > is:&nbsp; <input id="ff3" style="width: 75px"> </strong>
+    &nbsp;&nbsp;&nbsp;<br><br><br>
+
+
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+ <strong>Size of block 4:&nbsp;&nbsp;<input type="text"   style="width: 80px" value="300 KB" readonly="true" name="for block 4"></strong>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <strong>Process 4:&nbsp;&nbsp;</strong><input type="text" id="txt4" style="width: 120px" placeholder="Size in KB"name="for procss 4" >
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <strong>Process : &nbsp;<input id="pp4" style="width: 75px">&nbsp; in Block no :&nbsp; <input id="bb4" style="width: 75px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fragment of block &nbsp; <input id="bbb4" style="width: 50px" > is:&nbsp; <input id="ff4" style="width: 75px"> </strong>
+     &nbsp;&nbsp;&nbsp;<br><br><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ <strong>Size of block 5:&nbsp;&nbsp;<input type="text"  style="width: 80px"  value="600 KB" readonly="true" name="for block 5"></strong>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <strong>Process 5:&nbsp;&nbsp;</strong><input type="text" id="txt5" style="width: 120px" placeholder="Size in KB"name="for procss 5" >
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <strong>Process : &nbsp;<input id="pp5" style="width: 75px">&nbsp; in Block no :&nbsp; <input id="bb5" style="width: 75px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fragment of block &nbsp; <input id="bbb5" style="width: 50px" > is:&nbsp; <input id="ff5" style="width: 75px"> </strong>
+    &nbsp;&nbsp;&nbsp; <br><br><br>
+
+</form>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ <button  style="width: 100px" onclick="myFunction()">Submit</button><br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ <strong>**NOTE : In a execution which process no. is o means this<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  process is not execute.</strong> 
+
+</body>
+</head>
+</html>

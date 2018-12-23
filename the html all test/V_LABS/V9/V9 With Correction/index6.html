@@ -1,0 +1,156 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>Vlabs</title>
+<style>
+.button {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+.button:hover {background-color: #3e8e41}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+.auto-style1 {
+	margin-left: 280px;
+}
+.auto-style2 {
+	margin-left: 40px;
+}
+</style>
+</head>
+<body background="bg.jpg">
+
+<center><h2 style="font-family: times, serif; font-size:24pt; font-style:italic">Shortest Remaining Time Next Process Scheduling</h2></center>
+
+
+<table style="width:80%" align="center" id="TB">
+  <tr>
+    <th style="height: 26px" >Process No.</th>
+    <th style="height: 26px">Arrival time</th>
+    <th style="width: 235px; height: 26px;" align="center">Burst time</th>
+    <th style="width: 235px; height: 26px;" align="center">Waiting time</th>
+    <th style="width: 235px; height: 26px;" align="center">Turn Around time</th>
+  </tr>
+  <tr>
+    <td style="height: 25px" align="center">P1</td>
+    <td style="height: 25px" align="center">0</td>
+    <td style="height: 25px; width: 235px;" align="center">8</td>
+    <td style="height: 25px; width: 235px;" align="center"></td>
+    <td style="height: 25px; width: 235px;" align="center"> </td>
+
+  </tr>
+  <tr>
+    <td style="height: 26px" align="center">P2</td>
+    <td style="height: 26px" align="center">1</td>
+    <td style="width: 235px; height: 26px;" align="center">4</td>
+    <td style="height: 26px; width: 235px;" align="center"></td>
+    <td style="height: 25px; width: 235px;" align="center"> </td>
+
+  </tr>
+  <tr>
+    <td align="center">P3</td>
+    <td align="center">2</td>
+    <td style="width: 235px" align="center">9</td>
+    <td style="height: 25px; width: 235px;" align="center">&nbsp;</td>
+    <td style="height: 25px; width: 235px;" align="center"> </td>
+
+  </tr>
+  <tr>
+    <td style="height: 26px" align="center">P4</td>
+    <td style="height: 26px" align="center">3</td>
+    <td style="width: 235px; height: 26px;" align="center">5</td>
+    <td style="height: 25px; width: 235px;" align="center">&nbsp;</td>
+    <td style="height: 25px; width: 235px;" align="center"> </td>
+
+  </tr>
+
+</table>
+<script> 
+	function WTime(){
+		var a,b,c;
+		a = document.getElementById("PID").value;
+		a = a.toLowerCase();
+		b = parseInt(document.getElementById("WT").value);
+		c = parseInt(document.getElementById("TNT").value);
+		var myTable = document.getElementById('TB');
+		document.getElementById("ppp").innerHTML="&nbsp;";
+		if(a=="p1" && b==9 && c==17){
+			if(myTable.rows[1].cells[3].innerHTML =='9' && myTable.rows[1].cells[4].innerHTML == '17'){
+				document.getElementById("ppp").innerHTML="you have already answered for this Process , please enter for another processs";
+
+			}
+			myTable.rows[1].cells[3].innerHTML = '9';
+			myTable.rows[1].cells[4].innerHTML = '17';
+		}
+		else if(a=="p2" && b==0 && c==4){
+			if(myTable.rows[2].cells[3].innerHTML =='0' && myTable.rows[2].cells[4].innerHTML == '4'){
+				document.getElementById("ppp").innerHTML="you have already answered for this Process , please enter for another processs";
+
+			}
+
+			myTable.rows[2].cells[3].innerHTML = '0';
+			myTable.rows[2].cells[4].innerHTML = '4';
+
+		}
+		else if(a=="p3" && b==15 && c==24){
+			if(myTable.rows[3].cells[3].innerHTML =='15' && myTable.rows[3].cells[4].innerHTML == '24'){
+				document.getElementById("ppp").innerHTML="you have already answered for this Process , please enter for another processs";
+
+			}
+			myTable.rows[3].cells[3].innerHTML = '15';
+			myTable.rows[3].cells[4].innerHTML = '24';
+
+		}
+		else if(a=="p4" && b==2 && c==7){
+			if(myTable.rows[4].cells[3].innerHTML =='2' && myTable.rows[4].cells[4].innerHTML == '7'){
+				document.getElementById("ppp").innerHTML="you have already answered for this Process , please enter for another processs";
+
+			}
+
+			myTable.rows[4].cells[3].innerHTML = '2';
+			myTable.rows[4].cells[4].innerHTML = '7';
+
+		}
+		else{
+			document.getElementById("ppp").innerHTML="Your answer is wrong, make sure that you have entererd answer without blankspace!!";
+		}
+		var i;
+		for(i=0;i<=4;i++){
+			if(myTable.rows[1].cells[4].innerHTML == '17' && myTable.rows[2].cells[4].innerHTML == '4' && myTable.rows[3].cells[4].innerHTML == '24' && myTable.rows[4].cells[4].innerHTML =='7')
+			{
+			window.location.replace("index7.html");
+			}
+		}	
+	}
+</script>
+<p>&nbsp;</p>
+<center><img src="ans.jpg"></center>
+<p>&nbsp;</p>
+<font size="4"><center>Enter Process ID&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: <input type="text" ng-model="PID" id="PID"></center>
+<p id="pppp">&nbsp;</p>
+<center>Waiting Time&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: <input type="text" ng-model="WT" id="WT"></center>
+<p>&nbsp;</p>
+<center>Turn Around Time&nbsp;: <input type="text" ng-model="TNT" id="TNT"></center>
+<large><strong><center><p id="ppp" style="color:red;" >&nbsp;</p></center></strong></large></font>
+<center><button id="Sumbit_button" type="submit" onclick="WTime()" class="button">submit </button></center>
+</body>
+</html>

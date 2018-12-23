@@ -1,0 +1,13 @@
+step 1:
+(we have to make Block Diagram)
+enter Process ID and starting and Ending time for perticular block in line 
+
+step 2:
+
+calculate Waiting time and Turn around time for each process and submit 
+
+if (ANSWER is right)
+{
+	Step 3: enter average and waiting time 
+	step 4: Pratical complete if answer is right :)
+}

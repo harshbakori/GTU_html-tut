@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>this is table test</title>
+    <link rel="stylesheet" href="css/testweb.css">
+    <style>
+        table,
+        th,
+        td {
+            border-bottom: 2px solid black;
+            border-collapse: collapse;
+        }
+
+        td,
+        th {
+            width: 150px;
+            height: 30px;
+            text-align: center;
+            vertical-align: middle;
+            padding-bottom: 5px;
+
+        }
+
+        tbody tr:hover {
+            background: silver;
+        }
+
+        thead tr {
+            background: brown;
+            color: white;
+        }
+        #ul {
+            list-style-image: none;
+            list-style-type: square;
+            list-style-position: inside;
+            background-color: green;
+        }
+        #ul li {
+            font-size: 20px;
+            background-color: silver;
+        }
+        #u1 {
+            list-style: none;
+        }
+        #u1 li {
+            font-size: 20px;
+            background-color: silver;
+            float: left;
+            background-color: aqua;
+            margin-left: 10px;
+            padding: 15px;
+            text-align: center;
+        }
+        #u1 li:hover {
+            background-color: orange;
+            color: white;
+            border-left: red solid ;
+            border-right: red dotted 2px;
+            border-bottom: blue;
+        }
+        #u1 a { 
+        color: black;}
+    </style>
+</head>
+
+<body>
+
+    <table>
+        <thead>
+            <tr>
+                <th colspan="5">this is the table</th>
+            </tr>
+            <tr>
+                <th>no</th>
+                <th>student name</th>
+                <th>father name</th>
+                <th>contact number</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>harsh</td>
+                <td>dineshbhai</td>
+                <td>942712362578</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>harsh</td>
+                <td>dineshbhai</td>
+                <td>942712362578</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>harsh</td>
+                <td>dineshbhai</td>
+                <td>942712362578</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul id="ul">
+        <li>pakistan</li>
+        <li>brazil</li>
+        <li>USA</li>
+        <li>india</li>
+        <li>srilanka</li>
+        <li>london</li>
+    </ul>
+ <ul id="u1">
+        <li>pakistan</li>
+       <a href="#"> <li>brazil</li></a>
+        <li><a href="#">USA</a></li>
+        <a href="#"><li>india</li></a>
+        <a href="#"><li>srilanka</li></a>
+        <a href="#"><li>london</li></a>
+    </ul>
+
+</body>
+
+</html>

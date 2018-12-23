@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>java 3 simpal intrest</title>
+</head>
+
+<body>
+
+    enter principle <br><input id="t1" type="text" /><br> enter year <br><input id="t2" type="text" /><br>
+   <input type="button" value="find si " onclick="find();">
+    <script>
+        function find() {
+            var a = parseFloat(document.getElementById("t1").value)
+            var b = parseFloat(document.getElementById("t2").value)
+            var si;
+            if (a <= 1000 && b <= 5) {
+                si = 5;
+            } else if (a > 1000 && a <= 10000 && b <= 5) {
+                si = 7;
+            } else if (a > 1000 && a <= 10000 && b <= 10) {
+                si = 10;
+            } else if (a > 10000 && b > 5) {
+                si = 15;
+            } else {
+                alert("please select value properly");
+            }
+            var i = a * b * si / 100;
+            alert(i);
+        }
+
+    </script>
+
+</body>
+
+</html>

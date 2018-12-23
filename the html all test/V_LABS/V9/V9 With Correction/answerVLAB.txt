@@ -1,0 +1,18 @@
+answer of VLAB
+
+6th page::
+	
+		p1,9,17
+		p2,0,4
+		p3,15,24
+		p4,2,7
+		
+		
+		
+		for(i=0;i<=4;i++){
+			for(j=0;j<=4;j++){
+				if(myTable.rows[i].cells[j].innerHTML != ' ' && myTable.rows[i].cells[j].innerHTML != ' '){
+					window.location.replace("index6.html");
+				}
+			}
+		}	

@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="graph.ob.js"></script>
+
+    <script src="graph_line_use.ob.js"></script>
+</head>
+<body>
+    plot x^2-4x+4
+    plot circle
+    <div id="l1" style="width:550px;height:900px"></div>
+    <input type="button" value="graph" onclick="call()">
+    <script>
+        function call(){
+        var i1 = 1;
+            var c = [3,4,5,2,4,3,4]
+            var r = new Array(2,4,5,7,5,4);
+        var datapoints1 = [];
+        datapoints1.push({ x: i1, y: r[0] });
+        datapoints1.push({ x: i1+1, y: r[1] });
+        datapoints1.push({ x: i1+2, y: r[2] });
+        datapoints1.push({ x: i1+3, y: r[3] });
+        datapoints1.push({ x: i1+4, y: r[5] });
+        graphline("l1", datapoints1, "x axis", "y-axis");}
+    </script>
+    
+</body>
+</html>

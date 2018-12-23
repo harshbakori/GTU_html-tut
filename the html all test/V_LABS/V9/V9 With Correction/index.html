@@ -1,0 +1,107 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<style>
+.button {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+.button:hover {background-color: #3e8e41}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+div.c {
+    width: 50%;
+      
+}
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+.auto-style1 {
+	margin-left: 280px;
+}
+.auto-style2 {
+	margin-left: 40px;
+}
+</style>
+</head>
+<body background="bg.jpg">
+
+<center><h2 style="font-family: times, serif; font-size:24pt; font-style:italic">Shortest Remaining Time Next Process Scheduling</h2></center>
+<p class="auto-style2" >&nbsp;</p>
+
+
+<table style="width:50%" align="center">
+  <tr>
+    <th style="height: 26px" >Process No.</th>
+    <th style="height: 26px">Arrival time</th>
+    <th style="width: 235px; height: 26px;">Burst time</th>
+  </tr>
+  <tr>
+    <td style="height: 25px" align="center">P1</td>
+    <td style="height: 25px" align="center">0</td>
+    <td style="height: 25px; width: 235px;" align="center">8</td>
+  </tr>
+  <tr>
+    <td style="height: 26px" align="center">P2</td>
+    <td style="height: 26px" align="center">1</td>
+    <td style="width: 235px; height: 26px;" align="center">4</td>
+  </tr>
+  <tr>
+    <td style="height: 25px" align="center">P3</td>
+    <td style="height: 25px" align="center">2</td>
+    <td style="width: 235px; height: 25px;" align="center">9</td>
+  </tr>
+  <tr>
+    <td style="height: 26px" align="center">P4</td>
+    <td style="height: 26px" align="center">3</td>
+    <td style="width: 235px; height: 26px;" align="center">5</td>
+  </tr>
+
+</table>
+<script>
+	var PID 
+	function CheckPID(){
+		var a,b,c;
+		a = document.getElementById("PID").value;
+		a = a.toLowerCase();
+		b = parseInt(document.getElementById("ST").value);
+		c = parseInt(document.getElementById("ET").value);
+		if(a=="p1" && b==0 && c==1){
+			window.location.replace("index2.html");
+		}else{
+			document.getElementById("ppp").innerHTML="Your answer is wrong, make sure that you have entererd answer without blankspace!!";
+		}
+	}
+</script>
+
+	
+	<p>&nbsp;</p>
+	<p>&nbsp;</p>
+	<font size="4"><center>Enter Process ID: <input type="text" ng-model="PID" id="PID"></center>
+	<p>&nbsp;</p>
+	<center>Starting Time&nbsp;&nbsp;&nbsp;&nbsp; : <input type="text" ng-model="ST" id="ST"></center>
+	<p>&nbsp;</p>
+	<center>Ending time&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: <input type="text" ng-model="ET" id="ET"><br></center>
+	
+	<large><strong><center><p id="ppp" style="color:red;" >&nbsp;</p></center></strong></large></font>
+
+    <center><button id="Sumbit_button" type="submit" onclick="CheckPID()" class="button">submit </button></center>
+	<br>
+</body>
+</html>

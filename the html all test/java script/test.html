@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>java grater</title>
+</head>
+<body>
+    <input type="text" id="t1" style="width: 30px;">
+    <input type="text" id="t2" style="width: 30px;">
+    <button value="find grater" onclick="greater();">then</button>
+    
+    <script type="text/javascript">
+    function greater()
+        {
+            var a = parseInt(document.getElementById("t1").value);
+            var b = parseInt(document.getElementById("t2").value);
+            if ( a > b )
+                {
+                    alert("a is grater:" + a);
+                }
+            else if( b > a )
+                {
+                    alert("b is grater :" + b);
+                }
+            else
+            {
+                alert("all are same");
+            }
+        }
+    
+    </script>
+</body>
+</html>

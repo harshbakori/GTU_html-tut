@@ -1,0 +1,79 @@
+<html>
+<head>
+<style>
+table, td {
+    border: 1px solid black;
+	height:70px;
+	width:70px;
+	
+}
+</style>
+</head>
+<body bgcolor="#009900">
+<div id="main1" align="center">
+<h1 align="center">NEXT FIT ALGORITHM</h1>
+<h3 id="title1">Enter the number of block</h3><br />
+<input type="text" id="block1"/>
+<button onClick="getnumber()" id="button1">submit</button>
+
+<div id="TextBoxContainer" style="margin-right:65px; margin-top:40px;">
+    <!--Textboxes will be added here -->
+</div>
+<div id="ButtonContainer" style="margin-right:70px; margin-top:40px;">
+    <!--Textboxes will be added here -->
+</div>
+<table id="tab" style="margin-top:40px; margin-right:70px;">
+
+</table>
+</div>
+<script>
+
+function getnumber()
+{
+	var text = "textbox";
+	var	a = document.getElementById('block1').value;
+		for(var i=1;i<=a;i++)
+		
+		 {
+			var b = text + i;
+			var div= document.createElement('DIV');
+		
+    		div.innerHTML =  '<input name = "DynamicTextBox" type="text"id ="'+ b + '" />'
+			
+
+    		document.getElementById("TextBoxContainer").appendChild(div);
+				
+		}
+			var div= document.createElement('DIV');
+		
+    		div.innerHTML =  '<input name = "DynamicButton" type="submit"  value="submit" onClick="blockcol()" />'
+	
+    		document.getElementById("ButtonContainer").appendChild(div);
+
+}
+
+function blockcol()
+{
+	var arr=[];
+	var	a = document.getElementById('block1').value;
+				for(var i=1;i<=a;i++)
+					{
+						var fortext ="textbox";
+						var store = fortext + i;
+						var c =document.getElementById(store).value;
+						arr.push(c);
+					 var table = document.getElementById("tab");
+ 				   var row = table.insertRow(0);
+    			var cell1 = row.insertCell(0);
+    
+    		cell1.innerHTML = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + c;
+				
+    
+			
+}
+				
+
+}
+</script>
+</body>
+</html>

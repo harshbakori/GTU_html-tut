@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Vlabs</title>
+<style>
+.button {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+.button:hover {background-color: #3e8e41}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+.auto-style1 {
+	margin-left: 280px;
+}
+</style>
+</head>
+<body background="bg.jpg">
+
+<center><h2 style="font-family: times, serif; font-size:24pt; font-style:italic">Shortest Remaining Time Next Process Scheduling</h2></center>
+
+
+<table style="width:80%" align="center" id="TB">
+  <tr>
+    <th style="height: 26px" >Process No.</th>
+    <th style="height: 26px">Arrival time</th>
+    <th style="width: 235px; height: 26px;" align="center">Burst time</th>
+    <th style="width: 235px; height: 26px;" align="center">Waiting time</th>
+    <th style="width: 235px; height: 26px;" align="center">Turn Around time</th>
+  </tr>
+  <tr>
+    <td style="height: 25px" align="center">P1</td>
+    <td style="height: 25px" align="center">0</td>
+    <td style="height: 25px; width: 235px;" align="center">8</td>
+    <td style="height: 25px; width: 235px;" align="center">9</td>
+    <td style="height: 25px; width: 235px;" align="center"> 17</td>
+
+  </tr>
+  <tr>
+    <td style="height: 26px" align="center">P2</td>
+    <td style="height: 26px" align="center">1</td>
+    <td style="width: 235px; height: 26px;" align="center">4</td>
+    <td style="height: 26px; width: 235px;" align="center">0</td>
+    <td style="height: 25px; width: 235px;" align="center"> 4</td>
+
+  </tr>
+  <tr>
+    <td align="center">P3</td>
+    <td align="center">2</td>
+    <td style="width: 235px" align="center">9</td>
+    <td style="height: 25px; width: 235px;" align="center">15</td>
+    <td style="height: 25px; width: 235px;" align="center"> 24</td>
+
+  </tr>
+  <tr>
+    <td style="height: 26px" align="center">P4</td>
+    <td style="height: 26px" align="center">3</td>
+    <td style="width: 235px; height: 26px;" align="center">5</td>
+    <td style="height: 25px; width: 235px;" align="center">2</td>
+    <td style="height: 25px; width: 235px;" align="center"> 7</td>
+
+  </tr>
+
+</table>
+<script> 
+	function WTime(){
+		var a,b,c;
+		a = parseFloat(document.getElementById("WTAVG").value);
+		b = parseFloat(document.getElementById("TNTAVG").value);
+		
+		document.getElementById("ppp").innerHTML="&nbsp;";
+		if(a==6.5 && b==13){
+			document.getElementById("ppans").innerHTML="Average Waiting time :6.5            Average Turn Around Time :13";
+		}
+		else{
+			document.getElementById("ppp").innerHTML="Wrong answer!!";
+		}
+			
+	}
+</script>
+<p>&nbsp;</p>
+<center><img src="ans.jpg"></center>
+<p>&nbsp;</p>
+<center>Enter Average Waiting time&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : <input type="text" ng-model="PID" id="WTAVG"></center>
+<p>&nbsp;</p>
+
+<center>Enter Average Turn Around time: <input type="text" ng-model="PID" id="TNTAVG"></center>
+
+<large><strong><center><p id="ppp" style="color:red;" >&nbsp;</p></center></strong></large>
+<large><strong><center><p id="ppans" style="color:green;" >&nbsp;</p></center></strong></large>
+<center><button id="Sumbit_button" type="submit" onclick="WTime()" class="button">submit </button></center>
+</body>
+</html>
